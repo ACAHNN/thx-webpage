@@ -2,8 +2,9 @@ import { lucia } from "lucia";
 import { astro } from "lucia/middleware";
 import { prisma } from "@lucia-auth/adapter-prisma";
 import { PrismaClient } from "@prisma/client";
+//import { PrismaClient } from "@prisma/client/edge";
 
-const client = new PrismaClient();
+//const client = new PrismaClient();
 
 export const auth = lucia({
 	env: import.meta.env.DEV ? "DEV" : "PROD",
