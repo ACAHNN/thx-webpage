@@ -1,7 +1,3 @@
 {
-	"extends": "astro/tsconfigs/strict",
-	"compilerOptions": {
-		"module": "es2022",
-		"moduleResolution": "Node"
-	  },
+	"extends": "astro/tsconfigs/strict"
 }

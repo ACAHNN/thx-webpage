@@ -13,14 +13,11 @@
     "@astrojs/check": "^0.3.1",
     "@astrojs/netlify": "^3.0.4",
     "@astrojs/node": "^6.0.3",
-    "@lucia-auth/adapter-sqlite": "^2.0.1",
+    "@lucia-auth/adapter-prisma": "^3.0.2",
+    "@prisma/client": "^5.5.2",
     "astro": "^3.4.4",
     "better-sqlite3": "^9.0.0",
     "lucia": "^2.7.3",
-    "typescript": "^5.2.2",
-    "@types/better-sqlite3": "^7.6.7"
-  },
-  "devDependencies": {
-    "@types/better-sqlite3": "^7.6.7"
+    "typescript": "^5.2.2"
   }
 }
