@@ -10,7 +10,7 @@ import { libsql } from "@lucia-auth/adapter-sqlite";
 import { createClient } from "@libsql/client";
 
 const db = createClient({
-	url: "file:test/main.db"
+	url: "file:../test/main.db"
 });
 
 export const auth = lucia({
