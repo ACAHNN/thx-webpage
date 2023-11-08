@@ -8,7 +8,11 @@ const client = new PrismaClient();
 export const auth = lucia({
 	env: import.meta.env.DEV ? "DEV" : "PROD",
 	middleware: astro(),
-	adapter: prisma(client),
+	adapter: prisma(client, {
+		user: "user", // model User {}
+		key: "key", // model Key {}
+		session: "session" // model Session {}
+	}),
 	getUserAttributes: (data) => {
 		return {
 			username: data.username
