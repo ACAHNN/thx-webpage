@@ -1,5 +1,5 @@
 ---
-
+const session = await Astro.locals.auth.validate();
 ---
 
 <html lang="en">
@@ -8,9 +8,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>ThousandX</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>ThousandX</h1>
+		{session &&
+		<form method="post" action="/logout">
+			<input type="submit" value="Sign out" />
+		</form>}
+		{!session && 
+		<form method="get" action="/login">
+			<input type="submit" value="Login" />
+		</form>}
 	</body>
 </html>
