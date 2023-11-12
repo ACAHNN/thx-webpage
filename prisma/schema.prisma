@@ -1,6 +1,6 @@
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "mongodb"
+  url      = env("DB_URI")
 }
 
 generator client {
@@ -9,14 +9,14 @@ generator client {
 
 
 model User {
-  id           String    @id @unique
-
+  id           String    @id @map("_id")
+  username     String    @unique
   auth_session Session[]
   key          Key[]
 }
 
 model Session {
-  id             String @id @unique
+  id             String @id @map("_id")
   user_id        String
   active_expires BigInt
   idle_expires   BigInt
@@ -26,7 +26,7 @@ model Session {
 }
 
 model Key {
-  id              String  @id @unique
+  id              String  @id @map("_id")
   hashed_password String?
   user_id         String
   user            User    @relation(references: [id], fields: [user_id], onDelete: Cascade)
