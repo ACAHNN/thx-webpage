@@ -35,15 +35,15 @@ export const Features2 = () => (
         <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
             <span className="custom-block-subtitle">
-              Make Data-Driven Decisions
+              Vin Safe
             </span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl custom-block-big-title">
-              Issue tracking you’ll enjoy using
+              A floorplan platform you’ll enjoy using
             </h2>
             <p className="mb-12 text-customGrayText leading-loose">
-              Monitor and track data issues with ease using our intuitive and
-              efficient issue tracking system. Stay ahead of potential problems
-              and improve your workflow.
+              Monitor and track your digital floorplan to understand how vehicle inventory moves. 
+              Integrate with your existing tools seamlessly. Stay ahead of potential problems. 
+              Improve floorplan visibility and transparency.
             </p>
             <ul className="mb-6 text-white">
               <li className="mb-4 flex">

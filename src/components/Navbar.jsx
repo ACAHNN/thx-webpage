@@ -6,7 +6,7 @@ import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
   { label: "Home", href: "#home", ariaLabel: "Home" },
-  { label: "Features", href: "#features", ariaLabel: "Features" },
+  { label: "Products", href: "#features", ariaLabel: "Products" },
   { label: "Pricing", href: "#pricing", ariaLabel: "Pricing" },
 ];
 
@@ -63,7 +63,7 @@ export const Navbar = (session) => {
               className="text-white custom-border-gray rounded-xl
            bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
               href="/login"
-              aria-label="source code"
+              aria-label="profile"
             >
               {session.session && <form method="post" action="/logout">
                 <input type="submit" value="Logout" />
@@ -109,11 +109,13 @@ export const Navbar = (session) => {
               <a
                 className="text-white custom-border-gray rounded-xl
            bg-customDarkBg2 hover:bg-customDarkBg3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-                href="https://github.com/matt765/Tidestream"
-                target="_blank"
+                href="/login"
+             
               >
-                <GithubIcon />
-                Source code
+                {session.session && <form method="post" action="/logout">
+                  <input type="submit" value="Logout" />
+                </form>}
+                {!session.session && <span className="pt-px">Login</span>}
               </a>
             </div>
           </motion.div>
