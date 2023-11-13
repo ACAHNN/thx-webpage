@@ -1,24 +1,33 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import { Hero } from "../components/Hero.jsx";
+import { Navbar } from "../components/Navbar.jsx";
+import { Features1 } from "../components/Features1.jsx";
+import { Features2 } from "../components/Features2.jsx";
+import { Testimonials } from "../components/Testimonials.jsx";
+import { FeaturesDiagonal } from "../components/FeaturesDiagonal.jsx";
+import { Pricing } from "../components/Pricing.jsx";
+import { FAQ } from "../components/FAQ.jsx";
+import { Brands } from "../components/Brands.jsx";
+import { Divider } from "../components/Divider.jsx";
+import { Footer } from "../components/Footer.jsx";
+import { ScrollUpButton } from "../components/ScrollUpButton.jsx";
+import "../styles/Theme.css";
+import "../styles/Diagonals.css";
+
 const session = await Astro.locals.auth.validate();
+//console.log(session)
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>ThousandX</title>
-	</head>
-	<body>
-		<h1>ThousandX</h1>
-		{session &&
-		<form method="post" action="/logout">
-			<input type="submit" value="Sign out" />
-		</form>}
-		{!session && 
-		<form method="get" action="/login">
-			<input type="submit" value="Login" />
-		</form>}
-	</body>
-</html>
+<Layout title="Tailcast">
+  <Navbar client:load {session} />
+  <Hero client:load />
+  <Features1 client:load />
+  <Divider />
+  <Features2 client:load />
+  <FeaturesDiagonal client:load />
+  <Pricing client:load />
+  <Divider />
+  <Footer />
+  <ScrollUpButton client:load />
+</Layout>
