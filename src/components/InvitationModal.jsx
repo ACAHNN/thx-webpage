@@ -52,15 +52,15 @@ export const InvitationModal = ({ setIsOpen }) => {
               <ul className="mb-6 text-white mt-12">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Vestibulum viverra</span>
+                  <span>Request product demos</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Morbi mollis metus pretium</span>
+                  <span>Learn about new products</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Etiam lectus nunc, commodo</span>
+                  <span>Access to data API</span>
                 </li>
               </ul>
             </div>
