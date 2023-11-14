@@ -11,8 +11,7 @@ const footerData = [
   {
     title: "Important Links",
     items: [
-      "Organization Team",
-      "Our Journeys",
+      "Our Journey",
       "Pricing Plans",
       "Roadmap",
       "Terms & Conditions",
