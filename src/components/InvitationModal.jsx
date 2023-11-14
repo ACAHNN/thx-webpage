@@ -1,10 +1,30 @@
+import {useState} from 'react';
+
 import { motion, AnimatePresence } from "framer-motion";
 
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
 import { TailcastLogo } from "../assets/logos/TailcastLogo";
 
-export const InvitationModal = ({ setIsOpen }) => (
+
+export const InvitationModal = ({ setIsOpen }) => { 
+  const[email, setValue] = useState(""); 
+  async function handle() {
+    let response = await fetch(
+      "/email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email
+        }),
+      },
+    );
+    setIsOpen(false);
+  }
+  return (
   <AnimatePresence>
     <motion.div
       initial={{ opacity: 0, zIndex: 50 }}
@@ -64,12 +84,15 @@ export const InvitationModal = ({ setIsOpen }) => (
                     id="newsletterInput3-1"
                     type="text"
                     placeholder="Your email address"
+                    value={email}
+                    onChange={(e) => {setValue(e.target.value)}}
                   />
                 </div>
                 <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
                   <button
                     className="py-4 px-6 w-full text-white font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-customPrimary hover:bg-[#7274f3] transition ease-in-out duration-200"
                     type="button"
+                    onClick={handle}
                   >
                     Join Now
                   </button>
@@ -88,3 +111,4 @@ export const InvitationModal = ({ setIsOpen }) => (
     </motion.div>
   </AnimatePresence>
 );
+};

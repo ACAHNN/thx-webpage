@@ -64,7 +64,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center ">
+          <div className="relative w-screen flex justify-center mb-20">
             <img
               src={dashboard.src}
               alt="123"
