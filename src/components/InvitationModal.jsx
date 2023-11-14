@@ -17,7 +17,7 @@ export const InvitationModal = ({ setIsOpen }) => (
         onClick={() => setIsOpen(false)}
       >
         <div
-          className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-customDarkBgTransparentLighter custom-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8 fixed mx-auto z-50"
+          className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-customDarkBgTransparentLighter custom-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8  mx-auto z-50"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex relative">
@@ -45,7 +45,7 @@ export const InvitationModal = ({ setIsOpen }) => (
               </ul>
             </div>
             <div className="w-full lg:w-1/2 flex items-center flex-col justify-center pt-24 sm:pt-0">
-              <div className="flex inline lg:hidden justify-start items-center grow basis-0 mb-8 pr-6">
+              <div className="flex lg:hidden justify-start items-center grow basis-0 mb-8 pr-6">
                 <div className="text-white mr-2 text-8xl">
                   <TailcastLogo />
                 </div>
