@@ -16,10 +16,9 @@ import "../styles/Theme.css";
 import "../styles/Diagonals.css";
 
 const session = await Astro.locals.auth.validate();
-//console.log(session)
 ---
 
-<Layout title="Tailcast">
+<Layout title="Thousandx">
   <Navbar client:load {session} />
   <Hero client:load />
   <Features1 client:load />
