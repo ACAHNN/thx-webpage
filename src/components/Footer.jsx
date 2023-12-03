@@ -12,15 +12,12 @@ const footerData = [
     title: "Important Links",
     items: [
       "Our Journey",
-      "Pricing Plans",
       "Roadmap",
-      "Terms & Conditions",
-      "Privacy Policy",
     ],
   },
   {
     title: "Company",
-    items: ["About Us", "Press", "Contact Us"],
+    items: ["About Us", "Contact Us"],
   },
 ];
 
@@ -38,27 +35,6 @@ export const Footer = () => {
                 <div className="text-white font-['Inter'] font-bold text-xl">
                   Thousandx
                 </div>
-              </div>
-            
-              <div className="w-36 mx-auto lg:mx-0 m-2">
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <TwitterIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 bg-customDarkBg2 custom-border-gray  hover:bg-gray-700 rounded-xl"
-                  href="#"
-                >
-                  <InstagramIcon />
-                </a>
               </div>
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
